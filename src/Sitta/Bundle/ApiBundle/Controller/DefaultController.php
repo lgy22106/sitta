@@ -18,10 +18,11 @@ class DefaultController extends Controller
         $filepath = __DIR__.'/../../../../web/hello.png';
         $ocr = new TesseractOCR();
 
-        $text = $ocr->recognize('/tmp/hello.png');
+        //$text = $ocr->recognize('/tmp/hello.png');
 
         
-
+        $output = $ocr->executeTesseract('/tmp/1.tif','/tmp/tesseract-ocr-config-1203503770.conf');
+        $text = trim(file_get_contents($output));
 
 
         //$text = 'hi';
