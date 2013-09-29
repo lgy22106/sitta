@@ -1,0 +1,7 @@
+parameters:
+#    sitta_api.example.class: Sitta\Bundle\ApiBundle\Example
+
+services:
+#    sitta_api.example:
+#        class: %sitta_api.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

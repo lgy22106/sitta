@@ -1,0 +1,4 @@
+sitta_api:
+    resource: "@SittaApiBundle/Resources/config/routing.yml"
+    prefix:   /
+
