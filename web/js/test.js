@@ -7,10 +7,6 @@ $(document).ready(function() {
             url: "http://visuallightbox.com/images/demo/main_demo/part1/data/images1/image_lightbox.jpg"
         },
     })
-    .done(function(data) {
-        if ( console && console.log ) {
-            console.log( "Response: ", data);
-        }
-    })
+    
 
 });

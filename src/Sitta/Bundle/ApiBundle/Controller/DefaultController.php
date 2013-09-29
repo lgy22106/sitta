@@ -20,7 +20,7 @@ class DefaultController extends Controller
         if(!empty($request)) {
             $requestJson = json_decode($request);
             $tmpImage = '/tmp/'. rand() . 'jpg';
-            copy($request->get('url')->get('url'), $tmpImage);
+            copy($request->get('url'), $tmpImage);
             $txt = $ocr->recognize($tmpImage);
             $response = new Response(json_encode(array('value' => $txt)));
         }
