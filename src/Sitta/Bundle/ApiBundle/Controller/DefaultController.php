@@ -14,15 +14,13 @@ class DefaultController extends Controller
     }
 
     public function getAction() {
-
-        $filepath = __DIR__.'/../../../../web/hello.png';
         $ocr = new TesseractOCR();
 
-        //$text = $ocr->recognize('/tmp/hello.png');
-        $configFile = $ocr->generateConfigFile(func_get_args());
+        $text = $ocr->recognize('/tmp/1.jpg');
+        //$configFile = $ocr->generateConfigFile(func_get_args());
         
-        $output = $ocr->executeTesseract('/tmp/1.tif',$configFile);
-        $text = trim(file_get_contents($output));
+        //$output = $ocr->executeTesseract('/tmp/1.tif',$configFile);
+        //$text = trim(file_get_contents($output));
 
 
         //$text = 'hi';
