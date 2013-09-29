@@ -8,7 +8,7 @@ use TesseractOCR;
 
 class DefaultController extends Controller
 {
-    $ocr = new TesseractOCR();
+    
 
     public function indexAction($name)
     {
@@ -16,7 +16,7 @@ class DefaultController extends Controller
     }
 
     public function getAction(Request $request) {
-        
+        $ocr = new TesseractOCR();
         if(!empty($request)) {
             $requestJson = json_decode($request);
             $tmpImage = '/tmp/'. rand() . 'jpg'
