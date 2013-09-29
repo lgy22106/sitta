@@ -16,7 +16,7 @@ class DefaultController extends Controller
     public function getAction() {
         $ocr = new TesseractOCR();
 
-        $text = $ocr->recognize('/tmp/1.jpg');
+        $text = $ocr->recognize('/tmp/3.png');
         //$configFile = $ocr->generateConfigFile(func_get_args());
         
         //$output = $ocr->executeTesseract('/tmp/1.tif',$configFile);
