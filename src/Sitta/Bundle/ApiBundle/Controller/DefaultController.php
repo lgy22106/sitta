@@ -19,8 +19,8 @@ class DefaultController extends Controller
         $ocr = new TesseractOCR();
         if(!empty($request)) {
             $requestJson = json_decode($request);
-            $tmpImage = '/tmp/'. rand() . 'jpg'
-            copy($request->get('url'), $tmpImage);
+            $tmpImage = '/tmp/'. rand() . 'jpg';
+            copy($request->get('url')->get('url'), $tmpImage);
             $txt = $ocr->recognize($tmpImage);
             $response = new Response(json_encode(array('value' => $txt)));
         }
