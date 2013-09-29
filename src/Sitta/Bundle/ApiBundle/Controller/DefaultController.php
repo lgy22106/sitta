@@ -19,9 +19,9 @@ class DefaultController extends Controller
         $ocr = new TesseractOCR();
 
         //$text = $ocr->recognize('/tmp/hello.png');
-
+        $configFile = $ocr->generateConfigFile(func_get_args());
         
-        $output = $ocr->executeTesseract('/tmp/1.tif','/tmp/tesseract-ocr-config-1203503770.conf');
+        $output = $ocr->executeTesseract('/tmp/1.tif',$configFile);
         $text = trim(file_get_contents($output));
 
 
