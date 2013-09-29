@@ -1,0 +1,14 @@
+//request
+{
+    key: "AWIUHKEWQJijuiwouq12KJAIOWQ209()UJWOIj09qw"
+    url: "www.google.com/hi.jpg",
+
+
+}
+
+//response
+{
+    value: "hello world"
+    err: "Nop"
+
+}
