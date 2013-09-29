@@ -1,3 +1,6 @@
 sitta_api_homepage:
     pattern:  /hello/{name}
     defaults: { _controller: SittaApiBundle:Default:index }
+sitta_api_get:
+    pattern:  /get
+    defaults: { _controller: SittaApiBundle:Default:get }
