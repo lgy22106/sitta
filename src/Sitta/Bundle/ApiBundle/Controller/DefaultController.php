@@ -15,15 +15,7 @@ class DefaultController extends Controller
         return $this->render('SittaApiBundle:Default:index.html.twig', array('name' => $name));
     }
 
-<<<<<<< HEAD
-    public function getAction() {
-        $ocr = new TesseractOCR();
-
-        $text = $ocr->recognize('/tmp/3.png');
-        //$configFile = $ocr->generateConfigFile(func_get_args());
-=======
     public function getAction(Request $request) {
->>>>>>> ea6758efd75af8a994cf5175c36d1461fd79fb28
         
         if(!empty($request)) {
             $requestJson = json_decode($request);
